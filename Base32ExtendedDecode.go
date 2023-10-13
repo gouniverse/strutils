@@ -5,15 +5,17 @@ import (
 	"encoding/base32"
 )
 
-// Base32ExtEncode encodes binary data to base32 extended (RFC 4648) encoded text.
-func Base32ExtEncode(data []byte) (text []byte) {
-	n := base32.HexEncoding.EncodedLen(len(data))
-	buf := bytes.NewBuffer(make([]byte, 0, n))
-	encoder := base32.NewEncoder(base32.HexEncoding, buf)
-	encoder.Write(data)
-	encoder.Close()
-	if buf.Len() != n {
-		panic("internal error")
+// Base32ExtendedDecode encodes binary data to base32 extended (RFC 4648) encoded text.
+func Base32ExtendedDecode(data []byte) (text []byte, err error) {
+	n := base32.StdEncoding.DecodedLen(len(text))
+	data = make([]byte, n)
+	decoder := base32.NewDecoder(base32.StdEncoding, bytes.NewBuffer(text))
+
+	if n, err = decoder.Read(data); err != nil {
+		n = 0
 	}
-	return buf.Bytes()
+
+	text = data[:n]
+
+	return text, nil
 }
