@@ -25,7 +25,7 @@ func TestBase32ExtendedEncode(t *testing.T) {
 		t.Fail()
 	}
 
-	if string(textDec) != "123456" {
+	if string(textDec) != "Hello world" {
 		t.Error("Dec text must be equal to 123456 but found:", string(textDec))
 	}
 }
