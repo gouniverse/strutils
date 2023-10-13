@@ -1,5 +1,7 @@
 # String Utils <a href="https://gitpod.io/#https://github.com/gouniverse/strutils" style="float:right:"><img src="https://gitpod.io/button/open-in-gitpod.svg" alt="Open in Gitpod" loading="lazy"></a>
 
+![tests](https://github.com/gouniverse/utils/workflows/tests/badge.svg)
+
 - <b>Base64Decode(text []byte) (data []byte, err error)</b> - decodes base64 text to binary data.
 - <b>Base64Encode(data []byte) (text []byte)</b> -  encodes binary data to base64 encoded text.
 - <b>Base32ExtendedDecode(data []byte) string</b> -  decodes binary data to base32 extended (RFC 4648) encoded text.
