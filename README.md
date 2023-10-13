@@ -8,6 +8,8 @@
 - <b>Base32ExtendedEncode(data []byte) string</b> -  encodes binary data to base32 extended (RFC 4648) encoded text.
 - <b>ContainsAnyChar(str string, charset string) bool</b> - returns true if the string contains any of the characters in the specified charset
 - <b>ContainsOnly(str string, charset string) bool </b> - returns true is the string contains only charcters from the specified charset
+- <b>IntToBase32(num int) string</b>
+- <b>IntToBase36(num int) string</b>
 - <b>LeftPad(s string, padStr string, overallLen int) string</b>
 - <b>RightPad(s string, padStr string, overallLen int) string</b>
 - <b>Slugify(str string) string</b>
