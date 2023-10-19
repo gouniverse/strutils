@@ -1,6 +1,9 @@
 package strutils
 
-import "unicode"
+import (
+	"strings"
+	"unicode"
+)
 
 // ToSnake convert the given string to snake case following the Golang format:
 // acronyms are converted to lower-case and preceded by an underscore.
@@ -16,5 +19,7 @@ func ToSnake(in string) string {
 		out = append(out, unicode.ToLower(runes[i]))
 	}
 
-	return string(out)
+	outStr := strings.ReplaceAll(string(out), " ", "")
+
+	return outStr
 }

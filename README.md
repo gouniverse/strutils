@@ -6,6 +6,7 @@
 - <b>Base64Encode(data []byte) (text []byte)</b> -  encodes binary data to base64 encoded text.
 - <b>Base32ExtendedDecode(data []byte) string</b> -  decodes binary data to base32 extended (RFC 4648) encoded text.
 - <b>Base32ExtendedEncode(data []byte) string</b> -  encodes binary data to base32 extended (RFC 4648) encoded text.
+- <b>BcryptHashCompare(str string) bool</b> - compares the string to a bcrypt hash
 - <b>ContainsAnyChar(str string, charset string) bool</b> - returns true if the string contains any of the characters in the specified charset
 - <b>ContainsOnly(str string, charset string) bool </b> - returns true is the string contains only charcters from the specified charset
 - <b>IntToBase32(num int) string</b>
@@ -13,5 +14,8 @@
 - <b>LeftPad(s string, padStr string, overallLen int) string</b>
 - <b>RightPad(s string, padStr string, overallLen int) string</b>
 - <b>Slugify(str string) string</b>
-- <b>ToSnake(str string) string</b>
-- <b>UcFirst(str string) string</b>
+- <b>ToBcryptHash(str string) string</b> - converts the string to BCrypt hash, use BcryptHashCompare to check
+- <b>ToBytes(s string) []byte</b> - converts string to bytes
+- <b>ToCamel(str string) string</b> - converts the given string to camel case
+- <b>ToSnake(str string) string</b> - converts the given string to snake case
+- <b>UcFirst(str string) string</b> - convert first letter into upper case
