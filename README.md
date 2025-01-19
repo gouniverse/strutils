@@ -9,7 +9,7 @@
 - <b>BcryptHashCompare(str string) bool</b> - compares the string to a bcrypt hash
 - <b>>Between(str string, startNeedle string, endNeedle string) (result string, found bool)</b> - returns the substring between two needles
 - <b>ContainsAnyChar(str string, charset string) bool</b> - returns true if the string contains any of the characters in the specified charset
-- <b>ContainsOnly(str string, charset string) bool </b> - returns true is the string contains only charcters from the specified charset
+- <b>ContainsOnly(str string, charset string) bool </b> - returns true is the string contains only characters from the specified charset
 - <b>IntToBase32(num int) string</b>
 - <b>IntToBase36(num int) string</b>
 - <b>LeftFrom(s string, needle, string) string</b> - returns the substring on the left side of the needle
@@ -21,4 +21,5 @@
 - <b>ToBytes(s string) []byte</b> - converts string to bytes
 - <b>ToCamel(str string) string</b> - converts the given string to camel case
 - <b>ToSnake(str string) string</b> - converts the given string to snake case
+- <b>Truncate(str string, length int, ellipsis string) string</b> - truncates a string to a given length, adding an ellipsis if necessary.
 - <b>UcFirst(str string) string</b> - convert first letter into upper case
